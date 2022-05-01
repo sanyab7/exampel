@@ -1,6 +1,5 @@
 import io.restassured.http.ContentType;
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,7 @@ import static io.restassured.RestAssured.given;
 import static java.lang.System.out;
 
 public class AppTest {
- //public static final Logger logger = LoggerFactory.getLogger(AppTest.class);
+    static Logger logger = Logger.getLogger(AppTest.class);
 
     @Test
     public void test1() {
@@ -28,7 +27,7 @@ public class AppTest {
         given()
                 .log().all()
                 .baseUri("https://gorest.co.in/public/v2/users")
-                .basePath("/2680")
+                .basePath("/3378")
                 .contentType(ContentType.JSON)
                 .when().get()
                 .then()
@@ -65,16 +64,15 @@ public class AppTest {
                 .body().as(usersgorest.class);
         System.out.println("user name = " + obektid.getName());
        logger.info("user name is =" +obektid.getName());
-       logger.warn(obektid.getName());
-        DOMConfigurator.configure("log4j.xml");
-        logger.debug("Sample debug message 1111111");
-        logger.info("Sample info message");
-        logger.warn("Sample warn message");
-        logger.error("Sample error message");
-        logger.fatal("Sample fatal message");
+//       logger.warn(obektid.getName());
+//        DOMConfigurator.configure("log4j.xml");
+//        logger.debug("Sample debug message 1111111");
+//        logger.info("Sample info message");
+//        logger.warn("Sample warn message");
+//        logger.error("Sample error message");
+//        logger.fatal("Sample fatal message");
     }
 
-    static Logger logger = Logger.getLogger(AppTest.class);
 
 
 }
