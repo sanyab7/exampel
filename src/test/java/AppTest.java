@@ -44,7 +44,7 @@ public class AppTest {
                 .contentType(ContentType.JSON)
                 .get("https://gorest.co.in/public/v2/users")
                 .then()
-               .log()
+                .log()
                 .all()
                 .extract()
                 .body().jsonPath()
@@ -108,17 +108,17 @@ public class AppTest {
         Assert.assertEquals(gender, succsesReg.getGender());
         Assert.assertEquals(status, succsesReg.getStatus());
         int mmm = succsesReg.getId();
-          logger.info(mmm);
-given()
-        .headers(
-                "Authorization",
-                "Bearer " + token,
-                "Content-Type",
-                ContentType.JSON,
-                "Accept",
-                ContentType.JSON)
-        .when()
-        .delete("https://gorest.co.in/public/v2/users/" + mmm)
-        .then().log().all().statusCode(204);
+        logger.info(mmm);
+        given()
+                .headers(
+                        "Authorization",
+                        "Bearer " + token,
+                        "Content-Type",
+                        ContentType.JSON,
+                        "Accept",
+                        ContentType.JSON)
+                .when()
+                .delete("https://gorest.co.in/public/v2/users/" + mmm)
+                .then().log().all().statusCode(204);
     }
 }
