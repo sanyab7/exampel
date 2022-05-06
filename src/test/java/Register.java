@@ -9,7 +9,7 @@ public class Register {
         this.email = email;
         this.gender = gender;
         this.status = status;
-            }
+    }
 
     public String getName() {
         return name;

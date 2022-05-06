@@ -6,7 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 
-public class usersgorest {
+public class UsersGoRest {
     private int id;
     private String name;
     private String email;
