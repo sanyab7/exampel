@@ -11,7 +11,7 @@ public class AppTest {
 
     @Test
     public void test1() {
-        List<UsersGoRest> usergo = RestClientJava.getMethodListObjects();
+      List<UsersGoRest> usergo = RestClientJava.getMethodListObjects();
 
     }
 
@@ -23,14 +23,16 @@ public class AppTest {
 
     @Test
     public void test3() {
+
         List<UsersGoRest> usergo = RestClientJava.getMethodListObjects();
+
         Assert.assertTrue(usergo.size() > 0);
         int mm = usergo.get((0)).getId();
         logger.info("user id =" + mm);
 
         RestClientJava myGet = new RestClientJava();
         UsersGoRest obektid = myGet.getMethodReturn(String.valueOf(mm));
-        logger.info("user name is =" + obektid.getName());
+                       logger.info("user name is =" + obektid.getName());
     }
 
     @Test
