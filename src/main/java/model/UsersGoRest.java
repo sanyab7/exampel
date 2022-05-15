@@ -1,3 +1,5 @@
+package model;
+
 import lombok.*;
 
 @Getter
@@ -6,10 +8,11 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 
-public class SuccsesReg {
+public class UsersGoRest {
     private int id;
     private String name;
     private String email;
     private String gender;
     private String status;
+
 }

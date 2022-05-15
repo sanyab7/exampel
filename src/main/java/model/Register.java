@@ -1,3 +1,5 @@
+package model;
+
 public class Register {
     private String name;
     private String email;
